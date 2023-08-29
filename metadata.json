@@ -1,7 +1,7 @@
 {
     "Identifier": "eos2l0q",
     "Slug": "schisto-swisstph",
-    "Status": "Readys",
+    "Status": "Ready",
     "Title": "Anti-schistosomiasis activity",
     "Description": "Prediction of the activity of small molecules against the schistosoma parasite. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH. In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively)",
     "Mode": "In-house",
