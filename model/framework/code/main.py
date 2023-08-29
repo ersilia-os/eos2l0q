@@ -2,8 +2,7 @@
 import os
 import csv
 import sys
-from rdkit import Chem
-from rdkit.Chem.Descriptors import MolWt
+import joblib
 
 # parse arguments
 input_file = sys.argv[1]
@@ -12,9 +11,22 @@ output_file = sys.argv[2]
 # current file directory
 root = os.path.dirname(os.path.abspath(__file__))
 
+MODELPATH = os.path.join(root, "..", "..", "checkpoints")
+
+
 # my model
 def my_model(smiles_list):
-    return [MolWt(Chem.MolFromSmiles(smi)) for smi in smiles_list]
+    mdl1 = joblib.load(os.path.join(MODELPATH, "nts_perc_10uM_bin70_eosce.joblib"))
+    mdl2 = joblib.load(os.path.join(MODELPATH, "nts_perc_10uM_bin90_eosce.joblib"))
+    mdl3 = joblib.load(os.path.join(MODELPATH, "adult_ic50_bin10_morgan.joblib"))
+    mdl4 = joblib.load(os.path.join(MODELPATH, "adult_ic50_bin5_morgan.joblib"))
+
+    y_pred1 = mdl1.predict_proba(smiles_list)[:,1]
+    y_pred2 = mdl2.predict_proba(smiles_list)[:,1]
+    y_pred3 = mdl3.predict_proba(smiles_list)[:,1]
+    y_pred4 = mdl4.predict_proba(smiles_list)[:,1]
+
+    return y_pred1, y_pred2, y_pred3, y_pred4
 
 
 # read SMILES from .csv file, assuming one column with header
@@ -24,16 +36,11 @@ with open(input_file, "r") as f:
     smiles_list = [r[0] for r in reader]
 
 # run model
-outputs = my_model(smiles_list)
-
-#check input and output have the same lenght
-input_len = len(smiles_list)
-output_len = len(outputs)
-assert input_len == output_len
+output1, output2, output3, output4 = my_model(smiles_list)
 
 # write output in a .csv file
 with open(output_file, "w") as f:
     writer = csv.writer(f)
-    writer.writerow(["value"])  # header
-    for o in outputs:
-        writer.writerow([o])
+    writer.writerow(["NTS_70perc_10uM", "NTS_90perc_10uM", "Adult_IC50_10uM", "Adult_IC50_5uM"])  # header with column names
+    for o1, o2, o3, o4 in zip(output1, output2, output3, output4):
+        writer.writerow([o1, o2, o3, o4])
