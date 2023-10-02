@@ -14,12 +14,12 @@ Prediction of the activity of small molecules against the schistosoma parasite. 
 * Task: `Classification`
 * Output: `Probability`
 * Output Type: `Float`
-* Output Shape: `Single`
+* Output Shape: `List`
 * Interpretation: The probabilities of the molecule being active against schistosoma in NTS stage (in a % of inhibition assay at 70 and 90% inhibition 10uM) and adult stage (in IC50 assay at cut-offs 5 and 10uM
 
 ## References
 
-* [Publication](https://www.biorxiv.org/content/10.1101/2022.12.13.520154v1)
+* [Publication](https://pubmed.ncbi.nlm.nih.gov/30398059)
 * [Source Code](https://github.com/ersilia-os/lazy-qsar)
 * Ersilia contributor: [GemmaTuron](https://github.com/GemmaTuron)
 
@@ -30,7 +30,7 @@ Prediction of the activity of small molecules against the schistosoma parasite. 
 
 ## Citation
 
-If you use this model, please cite the [original authors](https://www.biorxiv.org/content/10.1101/2022.12.13.520154v1) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
+If you use this model, please cite the [original authors](https://pubmed.ncbi.nlm.nih.gov/30398059) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
 
 ## License
 
