@@ -26,7 +26,7 @@ Prediction of the activity of small molecules against the schistosoma parasite. 
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos2l0q)
 * [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip)
-* [DockerHub](https://hub.docker.com/r/ersiliaos/eos2l0q) (AMD64, ARM64)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos2l0q) (AMD64)
 
 ## Citation
 
