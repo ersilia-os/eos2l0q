@@ -3,22 +3,19 @@
     "Slug": "schisto-swisstph",
     "Status": "Ready",
     "Title": "Anti-schistosomiasis activity",
-    "Description": "Prediction of the activity of small molecules against the schistosoma parasite. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH. In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively)\n",
+    "Description": "Prediction of the activity of small molecules against the schistosoma parasite. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH. In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively)",
+    "Deployment": [
+        "Local"
+    ],
     "Source": "Local",
     "Source Type": "Internal",
+    "Task": "Annotation",
+    "Subtask": "Activity prediction",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
     "Input Dimension": 1,
-    "Task": "Annotation",
-    "Subtask": "Activity prediction",
-    "Biomedical Area": [
-        "Schistosomiasis"
-    ],
-    "Target Organism": [
-        "Schistosoma mansoni"
-    ],
+    "Input Shape": "Single",
     "Output": [
         "Probability"
     ],
@@ -30,19 +27,24 @@
         "Schistosomiasis",
         "IC50"
     ],
-    "Publication": "https://pubmed.ncbi.nlm.nih.gov/30398059",
+    "Biomedical Area": [
+        "Schistosomiasis"
+    ],
+    "Target Organism": [
+        "Schistosoma mansoni"
+    ],
     "Publication Type": "Other",
     "Publication Year": 2023,
+    "Publication": "https://pubmed.ncbi.nlm.nih.gov/30398059",
     "Source Code": "https://github.com/ersilia-os/lazy-qsar",
     "License": "GPL-3.0-or-later",
     "Contributor": "GemmaTuron",
     "Incorporation Date": "2023-08-24",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2l0q",
     "Docker Architecture": [
         "AMD64"
     ],
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip",
-    "Deployment": [
-        "Local"
-    ]
+    "Model Size": 2.0,
+    "Environment Size": 2592.0
 }
