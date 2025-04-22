@@ -1,5 +1,5 @@
 name,type,direction,description
-NTS_70perc_10uM,float,high,Classification score for Smansoni inhibition based on a  percentage of inhibition at single point (10um) cut-off of 70%
-NTS_90perc_10uM,float,high,Classification score for Smansoni inhibition based on a  percentage of inhibition at single point (10um) cut-off of 90%
-Adult_IC50_10uM,float,high,Classification score for Pfalciparum NF54 inhibition based on an IC50 of 10uM for adult specimens
-Adult_IC50_5uM,float,high,Classification score for Pfalciparum NF54 inhibition based on an IC50 of 5uM for adult specimens
+nts_70perc_10um,float,high,Classification score for Smansoni inhibition based on a  percentage of inhibition at single point (10um) cut-off of 70%
+nts_90perc_10um,float,high,Classification score for Smansoni inhibition based on a  percentage of inhibition at single point (10um) cut-off of 90%
+adult_ic50_10um,float,high,Classification score for Pfalciparum NF54 inhibition based on an IC50 of 10uM for adult specimens
+adult_ic50_5um,float,high,Classification score for Pfalciparum NF54 inhibition based on an IC50 of 5uM for adult specimens
