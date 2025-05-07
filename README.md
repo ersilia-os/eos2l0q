@@ -47,9 +47,9 @@ Below are the **Output Columns** of the model:
 - **Image Size (Mb):** `216.43`
 
 **Computational Performance (seconds):**
-- 4 inputs: `30.14`
-- 20 inputs: `24`
-- 100 inputs: `32.22`
+- 10 inputs: `30.14`
+- 100 inputs: `21.97`
+- 10000 inputs: `27.61`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/lazy-qsar](https://github.com/ersilia-os/lazy-qsar)
