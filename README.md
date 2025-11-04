@@ -1,8 +1,9 @@
 # Anti-schistosomiasis activity
 
-Prediction of the activity of small molecules against the schistosoma parasite. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH. In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively)
+Prediction of the activity of small molecules against the Schistosoma Mansoni. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH, corresponding to in vitro screenings from the Cancer Drug Library (Cowan et al, 2015) FDA Library (Panic et al, 2015), Pandemic Response Box (Biendl et al, 2021), Pathogen Box (Pasche et al, 2019) and Malaria Box (Ingram-Sieber, 2014). In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively, binarised to active/inactive according to the publication). Data was aggregated and modelled with LazyQSAR, AUROCS range from 0.7 to 0.89
 
 This model was incorporated on 2023-08-24.
+
 
 ## Information
 ### Identifiers
@@ -21,17 +22,21 @@ This model was incorporated on 2023-08-24.
 - **Input Dimension:** `1`
 
 ### Output
-- **Output Dimension:** `4`
+- **Output Dimension:** `8`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** The probabilities of the molecule being active against S.mansoni in NTS stage (single point inhibition 70% and 90% at  10uM) and adult stage (IC50 assay at cut-offs 5 and 10uM)
+- **Interpretation:** The probability of the molecule being active against S.mansoni at single point inhibition at 33 and 10uM, as well as aggregated and IC50 assay
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| nts_70perc_10um | float | high | Classification score for Smansoni inhibition based on a  percentage of inhibition at single point (10um) cut-off of 70% |
-| nts_90perc_10um | float | high | Classification score for Smansoni inhibition based on a  percentage of inhibition at single point (10um) cut-off of 90% |
-| adult_ic50_10um | float | high | Classification score for Pfalciparum NF54 inhibition based on an IC50 of 10uM for adult specimens |
-| adult_ic50_5um | float | high | Classification score for Pfalciparum NF54 inhibition based on an IC50 of 5uM for adult specimens |
+| nts_perc_10 | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (10um concentration of drug) |
+| nts_perc_33 | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (33um concentration of drug) |
+| nts_perc | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (aggregated 10 and 33um) |
+| nts_ic50 | float | high | probability of Smansoni NTS inhibition based on IC50 assays |
+| adult_perc_10 | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (10um concentration of drug) |
+| adult_perc_33 | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (33um concentration of drug) |
+| adult_perc | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (aggregated 10 and 33um) |
+| adult_ic50 | float | high | probability of Smansoni adult worm inhibition based on IC50 assays |
 
 
 ### Source and Deployment
