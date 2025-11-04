@@ -15,7 +15,6 @@
         "Compound"
     ],
     "Input Dimension": 1,
-    "Input Shape": "Single",
     "Output": [
         "Score"
     ],
@@ -40,6 +39,7 @@
     "License": "GPL-3.0-or-later",
     "Contributor": "GemmaTuron",
     "Incorporation Date": "2023-08-24",
+    "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2l0q",
     "Docker Architecture": [
@@ -49,5 +49,6 @@
     "Model Size": 2.0,
     "Environment Size": 2838.0,
     "Image Size": 216.43,
+    "Input Shape": "Single",
     "Docker Pack Method": "FastAPI"
 }
