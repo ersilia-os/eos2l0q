@@ -2,7 +2,7 @@
 import os
 import csv
 import sys
-import joblib
+from lazyqsar.qsar import LazyBinaryQSAR
 
 # parse arguments
 input_file = sys.argv[1]
@@ -13,21 +13,7 @@ root = os.path.dirname(os.path.abspath(__file__))
 
 MODELPATH = os.path.join(root, "..", "..", "checkpoints")
 
-
-# my model
-def my_model(smiles_list):
-    mdl1 = joblib.load(os.path.join(MODELPATH, "nts_perc_10uM_bin70_eosce.joblib"))
-    mdl2 = joblib.load(os.path.join(MODELPATH, "nts_perc_10uM_bin90_eosce.joblib"))
-    mdl3 = joblib.load(os.path.join(MODELPATH, "adult_ic50_bin10_morgan.joblib"))
-    mdl4 = joblib.load(os.path.join(MODELPATH, "adult_ic50_bin5_morgan.joblib"))
-
-    y_pred1 = mdl1.predict_proba(smiles_list)[:,1]
-    y_pred2 = mdl2.predict_proba(smiles_list)[:,1]
-    y_pred3 = mdl3.predict_proba(smiles_list)[:,1]
-    y_pred4 = mdl4.predict_proba(smiles_list)[:,1]
-
-    return y_pred1, y_pred2, y_pred3, y_pred4
-
+models = ["nts_perc_10", "nts_perc_33", "nts_perc", "nts_ic50", "adult_perc_10", "adult_perc_33", "adult_perc", "adult_ic50"]
 
 # read SMILES from .csv file, assuming one column with header
 with open(input_file, "r") as f:
@@ -36,11 +22,16 @@ with open(input_file, "r") as f:
     smiles_list = [r[0] for r in reader]
 
 # run model
-output1, output2, output3, output4 = my_model(smiles_list)
+y_preds = {}
+for m in models:
+    model_folder = os.path.join(MODELPATH, f"{m}")
+    model = LazyBinaryQSAR.load(model_folder)
+    y_pred = model.predict_proba(smiles_list=smiles_list)[:, 1]
+    y_preds[m]=y_pred
 
-# write output in a .csv file
+header = list(y_preds.keys())
 with open(output_file, "w") as f:
     writer = csv.writer(f)
-    writer.writerow(["nts_70perc_10um", "nts_90perc_10um", "adult_ic50_10um", "adult_ic50_5um"])  # header with column names
-    for o1, o2, o3, o4 in zip(output1, output2, output3, output4):
-        writer.writerow([o1, o2, o3, o4])
+    writer.writerow(header)
+    for o1, o2, o3, o4, o5, o6, o7, o8 in zip(*(y_preds[m].tolist() for m in header)):
+        writer.writerow([o1, o2, o3, o4, o5, o6, o7, o8])

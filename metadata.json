@@ -3,7 +3,7 @@
     "Slug": "schisto-swisstph",
     "Status": "Ready",
     "Title": "Anti-schistosomiasis activity",
-    "Description": "Prediction of the activity of small molecules against the schistosoma parasite. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH. In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively)",
+    "Description": "Prediction of the activity of small molecules against the Schistosoma Mansoni. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH, corresponding to in vitro screenings from the Cancer Drug Library (Cowan et al, 2015) FDA Library (Panic et al, 2015), Pandemic Response Box (Biendl et al, 2021), Pathogen Box (Pasche et al, 2019) and Malaria Box (Ingram-Sieber, 2014). In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively, binarised to active/inactive according to the publication). Data was aggregated and modelled with LazyQSAR, AUROCS range from 0.7 to 0.89",
     "Deployment": [
         "Local"
     ],
@@ -18,9 +18,9 @@
     "Output": [
         "Score"
     ],
-    "Output Dimension": 4,
+    "Output Dimension": 8,
     "Output Consistency": "Fixed",
-    "Interpretation": "The probabilities of the molecule being active against S.mansoni in NTS stage (single point inhibition 70% and 90% at  10uM) and adult stage (IC50 assay at cut-offs 5 and 10uM)",
+    "Interpretation": "The probability of the molecule being active against S.mansoni at single point inhibition at 33 and 10uM, as well as aggregated and IC50 assay",
     "Tag": [
         "Neglected tropical disease",
         "Schistosomiasis",
@@ -49,6 +49,5 @@
     "Model Size": 2.0,
     "Environment Size": 2838.0,
     "Image Size": 216.43,
-    "Input Shape": "Single",
     "Docker Pack Method": "FastAPI"
 }
