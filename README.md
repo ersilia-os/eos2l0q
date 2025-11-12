@@ -2,8 +2,7 @@
 
 Prediction of the activity of small molecules against the Schistosoma Mansoni. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH, corresponding to in vitro screenings from the Cancer Drug Library (Cowan et al, 2015) FDA Library (Panic et al, 2015), Pandemic Response Box (Biendl et al, 2021), Pathogen Box (Pasche et al, 2019) and Malaria Box (Ingram-Sieber, 2014). In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively, binarised to active/inactive according to the publication). Data was aggregated and modelled with LazyQSAR, AUROCS range from 0.7 to 0.89
 
-This model was incorporated on 2023-08-24.
-
+This model was incorporated on 2023-08-24.Last packaged on 2025-11-12.
 
 ## Information
 ### Identifiers
@@ -49,8 +48,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `21`
 - **Environment Size (Mb):** `7632`
-- **Image Size (Mb):** `216.43`
+- **Image Size (Mb):** `7529.89`
 
+**Computational Performance (seconds):**
+- 10 inputs: `50.33`
+- 100 inputs: `68.28`
+- 10000 inputs: `1618.81`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/lazy-qsar](https://github.com/ersilia-os/lazy-qsar)
