@@ -21,7 +21,7 @@ This model was incorporated on 2023-08-24.Last packaged on 2025-11-12.
 - **Input Dimension:** `1`
 
 ### Output
-- **Output Dimension:** `8`
+- **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
 - **Interpretation:** The probability of the molecule being active against S.mansoni at single point inhibition at 33 and 10uM, as well as aggregated and IC50 assay
 
@@ -29,10 +29,8 @@ Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
 | nts_perc_10 | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (10um concentration of drug) |
-| nts_perc_33 | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (33um concentration of drug) |
 | nts_perc | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (aggregated 10 and 33um) |
 | nts_ic50 | float | high | probability of Smansoni NTS inhibition based on IC50 assays |
-| adult_perc_10 | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (10um concentration of drug) |
 | adult_perc_33 | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (33um concentration of drug) |
 | adult_perc | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (aggregated 10 and 33um) |
 | adult_ic50 | float | high | probability of Smansoni adult worm inhibition based on IC50 assays |
