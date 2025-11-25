@@ -1,9 +1,7 @@
 name,type,direction,description
 nts_perc_10,float,high,probability of Smansoni NTS inhibition based on percentage of inhibition at single point (10um concentration of drug)
-nts_perc_33,float,high,probability of Smansoni NTS inhibition based on percentage of inhibition at single point (33um concentration of drug)
 nts_perc,float,high,probability of Smansoni NTS inhibition based on percentage of inhibition at single point (aggregated 10 and 33um)
 nts_ic50,float,high,probability of Smansoni NTS inhibition based on IC50 assays
-adult_perc_10,float,high,probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (10um concentration of drug)
 adult_perc_33,float,high,probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (33um concentration of drug)
 adult_perc,float,high,probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (aggregated 10 and 33um)
 adult_ic50,float,high,probability of Smansoni adult worm inhibition based on IC50 assays

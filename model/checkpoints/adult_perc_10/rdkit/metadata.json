@@ -1,7 +1,0 @@
-{
-    "num_partitions": 1,
-    "random_state": 42,
-    "num_trials": 10,
-    "fit_time": 54.411213636398315,
-    "score": 0.6647591240875912
-}

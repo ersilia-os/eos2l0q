@@ -13,7 +13,7 @@ root = os.path.dirname(os.path.abspath(__file__))
 
 MODELPATH = os.path.join(root, "..", "..", "checkpoints")
 
-models = ["nts_perc_10", "nts_perc_33", "nts_perc", "nts_ic50", "adult_perc_10", "adult_perc_33", "adult_perc", "adult_ic50"]
+models = ["nts_perc_10", "nts_perc", "nts_ic50", "adult_perc_33", "adult_perc", "adult_ic50"]
 
 # read SMILES from .csv file, assuming one column with header
 with open(input_file, "r") as f:
@@ -33,5 +33,5 @@ header = list(y_preds.keys())
 with open(output_file, "w") as f:
     writer = csv.writer(f)
     writer.writerow(header)
-    for o1, o2, o3, o4, o5, o6, o7, o8 in zip(*(y_preds[m].tolist() for m in header)):
-        writer.writerow([o1, o2, o3, o4, o5, o6, o7, o8])
+    for o1, o2, o3, o4, o5, o6 in zip(*(y_preds[m].tolist() for m in header)):
+        writer.writerow([o1, o2, o3, o4, o5, o6])

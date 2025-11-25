@@ -18,7 +18,7 @@
     "Output": [
         "Score"
     ],
-    "Output Dimension": 8,
+    "Output Dimension": 6,
     "Output Consistency": "Fixed",
     "Interpretation": "The probability of the molecule being active against S.mansoni at single point inhibition at 33 and 10uM, as well as aggregated and IC50 assay",
     "Tag": [
