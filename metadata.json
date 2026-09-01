@@ -3,7 +3,7 @@
     "Slug": "schisto-swisstph",
     "Status": "Ready",
     "Title": "Anti-schistosomiasis activity",
-    "Description": "Prediction of the activity of small molecules against the Schistosoma Mansoni. This model has been developed by Ersilia thanks to the data provided by the Swiss TPH, corresponding to in vitro screenings from the Cancer Drug Library (Cowan et al, 2015) FDA Library (Panic et al, 2015), Pandemic Response Box (Biendl et al, 2021), Pathogen Box (Pasche et al, 2019) and Malaria Box (Ingram-Sieber, 2014). In vitro activity against newly transformed schistosoma (nts) and adult worms was measured (% of inhibition of activity and IC50, respectively, binarised to active/inactive according to the publication). Data was aggregated and modelled with LazyQSAR, AUROCS range from 0.7 to 0.89",
+    "Description": "Prediction of small-molecule activity against Schistosoma mansoni. Developed by Ersilia using data from Swiss TPH, corresponding to in vitro screenings of the Cancer Drug Library (Cowan et al, 2015), FDA Library (Panic et al, 2015), Pandemic Response Box (Biendl et al, 2021), Pathogen Box (Pasche et al, 2019) and Malaria Box (Ingram-Sieber, 2014). Activity against newly transformed schistosomula (nts) and adult worms was measured (% inhibition and IC50, respectively, binarised to active/inactive as per publication). Data were aggregated and modelled with LazyQSAR, AUROCs 0.7-0.89",
     "Deployment": [
         "Local"
     ],
