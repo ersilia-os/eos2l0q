@@ -1,6 +1,6 @@
 # Anti-schistosomiasis activity
 
-Predicts activity against Schistosoma mansoni, the blood fluke responsible for most human schistosomiasis, across single-point screens at 33 and 10 uM together with aggregated and IC50-based readouts. Ersilia built the models from in vitro screening data contributed by the Swiss Tropical and Public Health Institute, originating in the Cancer Drug Library campaign. Assays were run on newly transformed schistosomula rather than adult worms, the life stage most amenable to screening.
+Predicts activity against Schistosoma mansoni, the blood fluke behind most human schistosomiasis, from in vitro screening data contributed by the Swiss Tropical and Public Health Institute. Several campaigns were pooled, among them the Pathogen Box screen described in the cited paper, together with the Cancer Drug Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia trained six LazyQSAR classifiers, three for newly transformed schistosomula at 10 uM and three for adult worms at 33 uM, reaching AUROCs of 0.7 to 0.89.
 
 This model was incorporated on 2023-08-24.Last packaged on 2025-11-25.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-08-24.Last packaged on 2025-11-25.
 ### Output
 - **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of Schistosoma mansoni activity across single-point, aggregated and IC50 screening readouts.
+- **Interpretation:** Probability of Schistosoma mansoni inhibition in schistosomula and adult worms from 10 and 33 uM single-point, aggregated and IC50 assays.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
