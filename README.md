@@ -2,7 +2,8 @@
 
 Predicts activity against Schistosoma mansoni, the blood fluke behind most human schistosomiasis, from in vitro screening data contributed by the Swiss Tropical and Public Health Institute. Several campaigns were pooled, among them the Pathogen Box screen described in the cited paper, together with the Cancer Drug Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia trained six LazyQSAR classifiers, three for newly transformed schistosomula at 10 uM and three for adult worms at 33 uM, reaching AUROCs of 0.7 to 0.89.
 
-This model was incorporated on 2023-08-24.Last packaged on 2025-11-25.
+This model was incorporated on 2023-08-24.
+Last packaged on 2025-11-25.
 
 ## Information
 ### Identifiers
@@ -14,7 +15,7 @@ This model was incorporated on 2023-08-24.Last packaged on 2025-11-25.
 - **Subtask:** `Activity prediction`
 - **Biomedical Area:** `Schistosomiasis`
 - **Target Organism:** `Schistosoma mansoni`
-- **Tags:** `Neglected tropical disease`, `Schistosomiasis`, `IC50`
+- **Tags:** `Neglected tropical disease`, `Antiparasitic activity`, `IC50`
 
 ### Input
 - **Input:** `Compound`
@@ -42,6 +43,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos2l0q](https://hub.docker.com/r/ersiliaos/eos2l0q)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos2l0q_v3.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos2l0q_v3.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `18`
