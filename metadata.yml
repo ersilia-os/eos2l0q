@@ -1,0 +1,60 @@
+Identifier: eos2l0q
+Slug: schisto-swisstph
+Status: Ready
+Title: Anti-schistosomiasis activity
+Description: Predicts activity against Schistosoma mansoni, the blood fluke behind most
+  human schistosomiasis, from in vitro screening data contributed by the Swiss
+  Tropical and Public Health Institute. Several campaigns were pooled, among
+  them the Pathogen Box screen described in the cited paper, the Cancer Drug
+  Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia
+  trained six LazyQSAR classifiers, three for newly transformed schistosomula
+  and three for adult worms, with AUROC 0.81 to 0.88 in five-fold out-of-fold
+  validation. Outputs are ranks against 50,000 drug-like molecules.
+Deployment:
+  - Local
+Source: Local
+Source Type: Internal
+Task: Annotation
+Subtask: Activity prediction
+Input:
+  - Compound
+Input Dimension: 1
+Output:
+  - Score
+Output Dimension: 6
+Output Consistency: Fixed
+Interpretation: Rank of predicted Schistosoma mansoni inhibition in schistosomula and adult
+  worms (single-point, aggregated and IC50 assays) against 50,000 drug-like
+  molecules; 0.65 is better than 99% of them.
+Tag:
+  - Neglected tropical disease
+  - Antiparasitic activity
+  - IC50
+Biomedical Area:
+  - Schistosomiasis
+Target Organism:
+  - Schistosoma mansoni
+Publication Type: Peer reviewed
+Publication Year: 2019
+Publication: https://doi.org/10.1021/acsinfecdis.8b00220
+Source Code: https://github.com/ersilia-os/lazy-qsar
+License: GPL-3.0-or-later
+Contributor: GemmaTuron
+Incorporation Date: '2023-08-24'
+Last Packaging Date: '2025-11-25'
+Release: v3.0.2
+S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip
+DockerHub: https://hub.docker.com/r/ersiliaos/eos2l0q
+Docker Architecture:
+  - AMD64
+  - ARM64
+Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos2l0q_v3.sif
+Model Size: 18.0
+Environment Size: 7610.0
+Image Size: 7525.11
+Computational Performance 1: 43.72
+Computational Performance 2: 42.85
+Computational Performance 3: 77.93
+Computational Performance 4: 292.46
+Computational Performance 5: 1267.34
+Docker Pack Method: FastAPI

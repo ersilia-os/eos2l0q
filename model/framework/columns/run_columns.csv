@@ -1,7 +1,7 @@
 name,type,direction,description
-nts_perc_10,float,high,probability of Smansoni NTS inhibition based on percentage of inhibition at single point (10um concentration of drug)
-nts_perc,float,high,probability of Smansoni NTS inhibition based on percentage of inhibition at single point (aggregated 10 and 33um)
-nts_ic50,float,high,probability of Smansoni NTS inhibition based on IC50 assays
-adult_perc_33,float,high,probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (33um concentration of drug)
-adult_perc,float,high,probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (aggregated 10 and 33um)
-adult_ic50,float,high,probability of Smansoni adult worm inhibition based on IC50 assays
+nts_perc_10_rank,float,high,"Rank score of the compound's predicted inhibition of Schistosoma mansoni newly transformed schistosomula (NTS) in a single-point assay at 10 uM, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65."
+nts_perc_rank,float,high,"Rank score of the compound's predicted inhibition of Schistosoma mansoni newly transformed schistosomula (NTS) in single-point assays (10 and 33 uM aggregated), calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65."
+nts_ic50_rank,float,high,"Rank score of the compound's predicted inhibition of Schistosoma mansoni newly transformed schistosomula (NTS) in IC50 assays, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65."
+adult_perc_33_rank,float,high,"Rank score of the compound's predicted inhibition of Schistosoma mansoni adult worms in a single-point assay at 33 uM, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65."
+adult_perc_rank,float,high,"Rank score of the compound's predicted inhibition of Schistosoma mansoni adult worms in single-point assays (10 and 33 uM aggregated), calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65."
+adult_ic50_rank,float,high,"Rank score of the compound's predicted inhibition of Schistosoma mansoni adult worms in IC50 assays, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65."
