@@ -1,6 +1,6 @@
 # Anti-schistosomiasis activity
 
-Predicts activity against Schistosoma mansoni, the blood fluke behind most human schistosomiasis, from in vitro screening data contributed by the Swiss Tropical and Public Health Institute. Several campaigns were pooled, among them the Pathogen Box screen described in the cited paper, together with the Cancer Drug Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia trained six LazyQSAR classifiers, three for newly transformed schistosomula at 10 uM and three for adult worms at 33 uM, reaching AUROCs of 0.7 to 0.89.
+Predicts activity against Schistosoma mansoni, the blood fluke behind most human schistosomiasis, from in vitro screening data contributed by the Swiss Tropical and Public Health Institute. Several campaigns were pooled, among them the Pathogen Box screen described in the cited paper, the Cancer Drug Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia trained six LazyQSAR classifiers, three for newly transformed schistosomula and three for adult worms, with AUROC 0.81 to 0.88 in five-fold out-of-fold validation. Outputs are ranks against 50,000 drug-like molecules.
 
 This model was incorporated on 2023-08-24.
 Last packaged on 2025-11-25.
@@ -24,17 +24,17 @@ Last packaged on 2025-11-25.
 ### Output
 - **Output Dimension:** `6`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of Schistosoma mansoni inhibition in schistosomula and adult worms from 10 and 33 uM single-point, aggregated and IC50 assays.
+- **Interpretation:** Rank of predicted Schistosoma mansoni inhibition in schistosomula and adult worms (single-point, aggregated and IC50 assays) against 50,000 drug-like molecules; 0.65 is better than 99% of them.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| nts_perc_10 | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (10um concentration of drug) |
-| nts_perc | float | high | probability of Smansoni NTS inhibition based on percentage of inhibition at single point (aggregated 10 and 33um) |
-| nts_ic50 | float | high | probability of Smansoni NTS inhibition based on IC50 assays |
-| adult_perc_33 | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (33um concentration of drug) |
-| adult_perc | float | high | probability of Smansoni adult worm inhibition based on percentage of inhibition at single point (aggregated 10 and 33um) |
-| adult_ic50 | float | high | probability of Smansoni adult worm inhibition based on IC50 assays |
+| nts_perc_10_rank | float | high | Rank score of the compound's predicted inhibition of Schistosoma mansoni newly transformed schistosomula (NTS) in a single-point assay at 10 uM, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| nts_perc_rank | float | high | Rank score of the compound's predicted inhibition of Schistosoma mansoni newly transformed schistosomula (NTS) in single-point assays (10 and 33 uM aggregated), calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| nts_ic50_rank | float | high | Rank score of the compound's predicted inhibition of Schistosoma mansoni newly transformed schistosomula (NTS) in IC50 assays, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| adult_perc_33_rank | float | high | Rank score of the compound's predicted inhibition of Schistosoma mansoni adult worms in a single-point assay at 33 uM, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| adult_perc_rank | float | high | Rank score of the compound's predicted inhibition of Schistosoma mansoni adult worms in single-point assays (10 and 33 uM aggregated), calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65. |
+| adult_ic50_rank | float | high | Rank score of the compound's predicted inhibition of Schistosoma mansoni adult worms in IC50 assays, calibrated against a reference library of 50K drug-like molecules so that 0.65 is better than 99% of them. Recommended threshold: 0.65. |
 
 
 ### Source and Deployment
