@@ -43,7 +43,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos2l0q](https://hub.docker.com/r/ersiliaos/eos2l0q)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2l0q.zip)
-- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos2l0q_v3.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos2l0q_v3.sif)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos2l0q_v4.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos2l0q_v4.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `37`
