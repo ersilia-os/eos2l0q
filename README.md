@@ -3,7 +3,7 @@
 Predicts activity against Schistosoma mansoni, the blood fluke behind most human schistosomiasis, from in vitro screening data contributed by the Swiss Tropical and Public Health Institute. Several campaigns were pooled, among them the Pathogen Box screen described in the cited paper, the Cancer Drug Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia trained six LazyQSAR classifiers, three for newly transformed schistosomula and three for adult worms, with AUROC 0.81 to 0.88 in five-fold out-of-fold validation. Outputs are ranks against 50,000 drug-like molecules.
 
 This model was incorporated on 2023-08-24.
-Last packaged on 2025-11-25.
+Last packaged on 2026-11-23.
 
 ## Information
 ### Identifiers
@@ -48,12 +48,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `37`
 - **Environment Size (Mb):** `6954`
-- **Image Size (Mb):** `7525.11`
+- **Image Size (Mb):** `3288.3`
 
 **Computational Performance (seconds):**
-- 10 inputs: `43.72`
-- 100 inputs: `77.93`
-- 10000 inputs: `1267.34`
+- 10 inputs: `41.37`
+- 100 inputs: `50.97`
+- 10000 inputs: `1087.32`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/lazy-qsar](https://github.com/ersilia-os/lazy-qsar)
