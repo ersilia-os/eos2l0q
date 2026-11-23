@@ -2,13 +2,13 @@ Identifier: eos2l0q
 Slug: schisto-swisstph
 Status: Ready
 Title: Anti-schistosomiasis activity
-Description: Predicts activity against Schistosoma mansoni, the blood fluke behind most
-  human schistosomiasis, from in vitro screening data contributed by the Swiss
-  Tropical and Public Health Institute. Several campaigns were pooled, among
-  them the Pathogen Box screen described in the cited paper, the Cancer Drug
-  Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia
-  trained six LazyQSAR classifiers, three for newly transformed schistosomula
-  and three for adult worms, with AUROC 0.81 to 0.88 in five-fold out-of-fold
+Description: Predicts activity against Schistosoma mansoni, the blood fluke 
+  behind most human schistosomiasis, from in vitro screening data contributed by
+  the Swiss Tropical and Public Health Institute. Several campaigns were pooled,
+  among them the Pathogen Box screen described in the cited paper, the Cancer 
+  Drug Library, Pharmakon-1600, Pandemic Response Box and Malaria Box. Ersilia 
+  trained six LazyQSAR classifiers, three for newly transformed schistosomula 
+  and three for adult worms, with AUROC 0.81 to 0.88 in five-fold out-of-fold 
   validation. Outputs are ranks against 50,000 drug-like molecules.
 Deployment:
   - Local
@@ -23,9 +23,9 @@ Output:
   - Score
 Output Dimension: 6
 Output Consistency: Fixed
-Interpretation: Rank of predicted Schistosoma mansoni inhibition in schistosomula and adult
-  worms (single-point, aggregated and IC50 assays) against 50,000 drug-like
-  molecules; 0.65 is better than 99% of them.
+Interpretation: Rank of predicted Schistosoma mansoni inhibition in 
+  schistosomula and adult worms (single-point, aggregated and IC50 assays) 
+  against 50,000 drug-like molecules; 0.65 is better than 99% of them.
 Tag:
   - Neglected tropical disease
   - Antiparasitic activity
